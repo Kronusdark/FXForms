@@ -2966,7 +2966,8 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
 
 - (BOOL)resignFirstResponder
 {
-    return [self.textField resignFirstResponder];
+    BOOL superResign = [super resignFirstResponder];
+    return [self.textField resignFirstResponder] && superResign;
 }
 
 @end
@@ -3155,7 +3156,8 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
 
 - (BOOL)resignFirstResponder
 {
-    return [self.textView resignFirstResponder];
+    BOOL superResign = [super resignFirstResponder];
+    return [self.textView resignFirstResponder] && superResign;
 }
 
 @end
