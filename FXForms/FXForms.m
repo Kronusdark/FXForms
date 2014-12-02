@@ -1600,6 +1600,8 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     NSMutableDictionary *field = self.fields[index1];
     [self.fields removeObjectAtIndex:index1];
 
+	NSAssert(field, @"No Field at the given index.");
+
     id value = self.values[index1];
     [self.values removeObjectAtIndex:index1];
     
